@@ -25,6 +25,26 @@ Have Chrome Chromedriver, Edge and Firefox browsers installed
 Have Jenkins installed
 Java 8
 
+The Selenium WebDriver project includes the following features:
+
+implicit wait at each class level
+a few Thread.sleep instances were added to deal with website captcha interference where manual intervention was required
+
+The following TestNG annotations are used:
+
+@Parameter is used in the testng.xml file to pass browser choice
+@Test is used for each test case
+@BeforeMethod is used
+gets testcase name from Java Reflection and sets up extent report at test level and sets up screen shot png file
+
+@BeforeClass is used
+@AfterClass is used
+@BeforeSuite
+sets up extent reports
+@AfterSuite
+flushes extent reports
+
+
 The project is broken into separate modules for API and UI testing 
 
 API testing was run using:
